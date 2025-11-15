@@ -1,350 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">API Docs</div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">API Docs</div>
 
-    <a class="btn" href="http://144.76.184.187/">Get API Key</a>
-  </nav>
-</header>
+            <a class="btn" href="http://144.76.184.187/">Get API Key</a>
+        </nav>
+    </header>
 
-<div class="layout">
-  
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2 class="side-title">Documentation</h2>
+    <div class="layout">
 
-    <ul class="side-menu">
-      <li><a href="#">Introduction</a></li>
-      <li><a href="#">Authentication</a></li>
-      <li><a href="#">REST API</a></li>
-      <li><a href="#">Send SMS</a></li>
-      <li><a href="#">Delivery Reports</a></li>
-      <li><a href="#">Error Codes</a></li>
-      <li><a href="#">Webhooks</a></li>
-    </ul>
-  </aside>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="side-title">Documentation</h2>
 
-  <!-- Content Area -->
-  <main class="content">
-    <h1>Authetic Token Key API </h1>
-        <div class="code-box">
-            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <ul class="side-menu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Authentication</a></li>
+                <li><a href="#">REST API</a></li>
+                <li><a href="#">Send SMS</a></li>
+                <li><a href="#">Delivery Reports</a></li>
+                <li><a href="#">Error Codes</a></li>
+                <li><a href="#">Webhooks</a></li>
+            </ul>
+        </aside>
 
-            <pre><code class="code-content">http://144.76.184.187/http-tokenkeyapi.php?authentic-key=xxxxxxxxxxxxx&senderid=6char-senderid&route=1&number=Enter-10digit-MobNumber&message=helloSMS&templateid=120XXXXXXX</code></pre>
-        </div>
-    <div class="param-table">
-    <h2>API Parameters</h2>
+        <!-- Content Area -->
+        <main class="content">
+            <h1>Authetic Token Key API </h1>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Type</th>
-                <th>Required</th>
-                <th>Description</th>
-                <th>Example</th>
-            </tr>
-        </thead>
+                <pre><code class="code-content">http://144.76.184.187/http-tokenkeyapi.php?authentic-key=xxxxxxxxxxxxx&senderid=6char-senderid&route=1&number=Enter-10digit-MobNumber&message=helloSMS&templateid=120XXXXXXX</code></pre>
+            </div>
+            <div class="param-table">
+                <h2>API Parameters</h2>
 
-        <tbody>
-            <tr>
-                <td>authentic-key</td>
-                <td>String</td>
-                <td><span class="required">Yes</span></td>
-                <td>Your API Token Key</td>
-                <td>xxxxxxxxxxxx</td>
-            </tr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Required</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
 
-            <tr>
-                <td>senderid</td>
-                <td>String (6 chars)</td>
-                <td><span class="required">Yes</span></td>
-                <td>Registered 6-character DLT sender ID</td>
-                <td>ABCDEF</td>
-            </tr>
+                    <tbody>
+                        <tr>
+                            <td>authentic-key</td>
+                            <td>String</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>Your API Token Key</td>
+                            <td>xxxxxxxxxxxx</td>
+                        </tr>
 
-            <tr>
-                <td>route</td>
-                <td>Integer</td>
-                <td><span class="required">Yes</span></td>
-                <td>Route type (Domestic = 1)</td>
-                <td>1</td>
-            </tr>
+                        <tr>
+                            <td>senderid</td>
+                            <td>String (6 chars)</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>Registered 6-character DLT sender ID</td>
+                            <td>ABCDEF</td>
+                        </tr>
 
-            <tr>
-                <td>number</td>
-                <td>String</td>
-                <td><span class="required">Yes</span></td>
-                <td>10-digit mobile number</td>
-                <td>9876543210</td>
-            </tr>
+                        <tr>
+                            <td>route</td>
+                            <td>Integer</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>Route type (Domestic = 1)</td>
+                            <td>1</td>
+                        </tr>
 
-            <tr>
-                <td>message</td>
-                <td>String</td>
-                <td><span class="required">Yes</span></td>
-                <td>SMS content</td>
-                <td>HelloSMS</td>
-            </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>String</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>10-digit mobile number</td>
+                            <td>9876543210</td>
+                        </tr>
 
-            <tr>
-                <td>templateid</td>
-                <td>Numeric</td>
-                <td><span class="required">Yes</span></td>
-                <td>DLT Template ID</td>
-                <td>120XXXXXXXXXX</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                        <tr>
+                            <td>message</td>
+                            <td>String</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>SMS content</td>
+                            <td>HelloSMS</td>
+                        </tr>
+
+                        <tr>
+                            <td>templateid</td>
+                            <td>Numeric</td>
+                            <td><span class="required">Yes</span></td>
+                            <td>DLT Template ID</td>
+                            <td>120XXXXXXXXXX</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
-    <section class="param-table">
-    <h2>Domestic BULK SMS – Token API</h2>
+            <section class="param-table">
+                <h2>Domestic BULK SMS – Token API</h2>
 
-    <div class="code-box">
-        <pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=xxxxxxxxxxxxxxxxxxx&senderid=6char-senderid&route=1&number=91XXXXXXXXXX,91XXXXXXXXXX,91XXXXXXXXXX,91XXXXXXXXXX&message=helloSMS&templateid=120XXXXXXX</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                <div class="code-box">
+                    <pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=xxxxxxxxxxxxxxxxxxx&senderid=6char-senderid&route=1&number=91XXXXXXXXXX,91XXXXXXXXXX,91XXXXXXXXXX,91XXXXXXXXXX&message=helloSMS&templateid=120XXXXXXX</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+
+                <h3 style="margin-top:20px;">Extra Parameter Details (Only BULK SMS Differences)</h3>
+
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>number</td>
+                            <td>
+                                Multiple mobile numbers allowed, comma separated.<br>
+                                <small>Max limit depends on your panel permissions.</small>
+                            </td>
+                            <td>91XXXXXXXXXX,91XXXXXXXXXX</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="param-table">
+                <h2>International Send SMS API</h2>
+
+                <div class="code-box">
+                    <pre><code class="code-content">http://sms.azmobia.com/global-smsapi.php?username=EnterUsername&password=EnterPassword&senderid=Sender-id&route=18&number=Enter-number-withcountry-code&message=helloSMS&templateid=120XXXXXXX</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+
+                <h3 style="margin-top:20px;">Extra Parameter Details (Only for International SMS)</h3>
+
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>route</td>
+                            <td>Route for International SMS delivery</td>
+                            <td>18</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>
+                                Mobile number with country code.<br>
+                                No “+” symbol allowed.
+                            </td>
+                            <td>9715xxxxxx</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>senderid</td>
+                            <td>
+                                Approved sender ID for International SMS.
+                            </td>
+                            <td>ABCDEF</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="param-table">
+                <h2>Unicode SMS Token Webhook</h2>
+
+                <div class="code-box">
+                    <pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=XXXXXXXXXXXXX&senderid=6char-senderid&route=1&unicode=2&number=Enter-10digit-MobNumber&message=हेलो मैसेज&templateid=120XXXXXXX</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+
+                <h3 style="margin-top:20px;">Extra Parameter Details (Only for Unicode SMS)</h3>
+
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>unicode</td>
+                            <td>
+                                Set this value to <strong>2</strong> to enable Unicode SMS.<br>
+                                Required when sending Hindi/Marathi/Gujarati/Tamil etc.
+                            </td>
+                            <td>2</td>
+                            <td>Yes (when sending Unicode)</td>
+                        </tr>
+                        <tr>
+                            <td>message</td>
+                            <td>Unicode text (UTF-8 encoded).<br>Supports any Indian or international language.</td>
+                            <td>हेलो मैसेज</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="param-table">
+                <h2>Schedule SMS Token API</h2>
+
+                <div class="code-box">
+                    <pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=XXXXXXXXXXXXX&senderid=Senderid&route=1&number=91XXXXXXXXXX,91XXXXXXXXXX&time=2017-02-17 04:00pm&message=hellothere&templateid=120XXXXXXX</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+
+                <h3 style="margin-top:20px;">Extra Parameter Details (Only for Scheduled SMS)</h3>
+
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>time</td>
+                            <td>
+                                Use this parameter to schedule SMS for future delivery.<br>
+                                Format supported:<br>
+                                <strong>YYYY-MM-DD HH:MMam/pm</strong>
+                            </td>
+                            <td>2017-02-17 04:00pm</td>
+                            <td>Yes (for scheduled SMS)</td>
+                        </tr>
+
+                        <tr>
+                            <td>number</td>
+                            <td>
+                                Supports multiple numbers (comma-separated) for bulk scheduling.
+                            </td>
+                            <td>91XXXXXXXXXX,91XXXXXXXXXX</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="param-table">
+                <h2>Send SMS Token API (Without Template ID)</h2>
+
+                <div class="code-box">
+                    <pre><code class="code-content">http://sms.azmobia.com/tokenapi-nontid.php?authentic-key=XXXXXXXXXXXXX&senderid=6char-senderid&route=1&number=Enter-10digit-MobNumber&message=helloSMS</code></pre>
+                    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                </div>
+
+                <h3 style="margin-top:20px;">Extra Parameter Details (No Template-ID Required)</h3>
+
+                <table class="param-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>message</td>
+                            <td>
+                                SMS text without DLT template requirement.<br>
+                                (Allowed only when your route is non-DLT)
+                            </td>
+                            <td>helloSMS</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+        </main>
     </div>
 
-    <h3 style="margin-top:20px;">Extra Parameter Details (Only BULK SMS Differences)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>number</td>
-                <td>
-                    Multiple mobile numbers allowed, comma separated.<br>
-                    <small>Max limit depends on your panel permissions.</small>
-                </td>
-                <td>91XXXXXXXXXX,91XXXXXXXXXX</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="param-table">
-    <h2>International Send SMS API</h2>
-
-    <div class="code-box">
-<pre><code class="code-content">http://sms.azmobia.com/global-smsapi.php?username=EnterUsername&password=EnterPassword&senderid=Sender-id&route=18&number=Enter-number-withcountry-code&message=helloSMS&templateid=120XXXXXXX</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    </div>
-
-    <h3 style="margin-top:20px;">Extra Parameter Details (Only for International SMS)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>route</td>
-                <td>Route for International SMS delivery</td>
-                <td>18</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>number</td>
-                <td>
-                    Mobile number with country code.<br>
-                    No “+” symbol allowed.
-                </td>
-                <td>9715xxxxxx</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>senderid</td>
-                <td>
-                    Approved sender ID for International SMS.
-                </td>
-                <td>ABCDEF</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="param-table">
-    <h2>Unicode SMS Token Webhook</h2>
-
-    <div class="code-box">
-<pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=XXXXXXXXXXXXX&senderid=6char-senderid&route=1&unicode=2&number=Enter-10digit-MobNumber&message=हेलो मैसेज&templateid=120XXXXXXX</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    </div>
-
-    <h3 style="margin-top:20px;">Extra Parameter Details (Only for Unicode SMS)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>unicode</td>
-                <td>
-                    Set this value to <strong>2</strong> to enable Unicode SMS.<br>
-                    Required when sending Hindi/Marathi/Gujarati/Tamil etc.
-                </td>
-                <td>2</td>
-                <td>Yes (when sending Unicode)</td>
-            </tr>
-            <tr>
-                <td>message</td>
-                <td>Unicode text (UTF-8 encoded).<br>Supports any Indian or international language.</td>
-                <td>हेलो मैसेज</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="param-table">
-    <h2>Schedule SMS Token API</h2>
-
-    <div class="code-box">
-<pre><code class="code-content">http://sms.azmobia.com/http-tokenkeyapi.php?authentic-key=XXXXXXXXXXXXX&senderid=Senderid&route=1&number=91XXXXXXXXXX,91XXXXXXXXXX&time=2017-02-17 04:00pm&message=hellothere&templateid=120XXXXXXX</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    </div>
-
-    <h3 style="margin-top:20px;">Extra Parameter Details (Only for Scheduled SMS)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>time</td>
-                <td>
-                    Use this parameter to schedule SMS for future delivery.<br>
-                    Format supported:<br>
-                    <strong>YYYY-MM-DD HH:MMam/pm</strong>
-                </td>
-                <td>2017-02-17 04:00pm</td>
-                <td>Yes (for scheduled SMS)</td>
-            </tr>
-
-            <tr>
-                <td>number</td>
-                <td>
-                    Supports multiple numbers (comma-separated) for bulk scheduling.
-                </td>
-                <td>91XXXXXXXXXX,91XXXXXXXXXX</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="param-table">
-    <h2>WA Message Token API</h2>
-
-    <div class="code-box">
-<pre><code class="code-content">http://sms.azmobia.com/tokenkeyapi-wa.php?authentic-key=XXXXXXXXXXXX&senderid=6char-senderi&route=&number=Enter-10digit-MobNumbe&message=helloMessage</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    </div>
-
-    <h3 style="margin-top:20px;">Extra Parameter Details (WhatsApp Text)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>route</td>
-                <td>WhatsApp message route</td>
-                <td>1</td>
-                <td>Yes</td>
-            </tr>
-
-            <tr>
-                <td>message</td>
-                <td>Simple WhatsApp text message (no template required)</td>
-                <td>helloMessage</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="param-table">
-    <h2>Send SMS Token API (Without Template ID)</h2>
-
-    <div class="code-box">
-<pre><code class="code-content">http://sms.azmobia.com/tokenapi-nontid.php?authentic-key=XXXXXXXXXXXXX&senderid=6char-senderid&route=1&number=Enter-10digit-MobNumber&message=helloSMS</code></pre>
-        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    </div>
-
-    <h3 style="margin-top:20px;">Extra Parameter Details (No Template-ID Required)</h3>
-
-    <table class="param-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-                <th>Example</th>
-                <th>Required</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>message</td>
-                <td>
-                    SMS text without DLT template requirement.<br>
-                    (Allowed only when your route is non-DLT)
-                </td>
-                <td>helloSMS</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-
-  </main>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
